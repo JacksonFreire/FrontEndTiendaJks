@@ -9,7 +9,7 @@ import {map} from 'rxjs';
 })
 export class VentaService {
 
-  private urlEndPoint: string = 'http://localhost:8080/api/ventas';
+  private urlEndPoint: string = 'https://tiendajksbe.azurewebsites.net/api/ventas';
 
   constructor(private http: HttpClient) { }
 
@@ -18,5 +18,4 @@ export class VentaService {
       map((response) => response as Venta[])
     );
   }
-//Prova
 }

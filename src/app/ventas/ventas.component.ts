@@ -13,12 +13,10 @@ export class VentasComponent {
   constructor(private ventaService: VentaService){}
 
   ngOnInit(){
-/*
+
     this.ventaService.getVentas().subscribe(
        ventas => this.ventas = ventas 
     );
-*/
-
   }
 
 }
