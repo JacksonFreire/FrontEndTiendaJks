@@ -19,7 +19,7 @@
         <tr *ngFor="let venta of ventas">
             <td>{{ venta.id}}</td>
             <td>{{ venta.producto}}</td>
-            <td>{{venta.precio}}</td>
+            <td>{{venta.precio | currency: "USD"}}</td>
             <td>{{venta.color}}</td>
             <td>{{venta.cantidad}}</td>
             <td>{{venta.precioTotal}}</td>

@@ -8,10 +8,13 @@ import { FooterComponent } from './footer/footer.component';
 import { VentaService } from './ventas/venta.service';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
+import { ProductosComponent } from './productos/productos.component';
+import { ProductosService } from './productos/productos.service';
 
 const routes:Routes=[
   {path: '', redirectTo: '/ventas', pathMatch:'full'},
   {path:'ventas', component:VentasComponent},
+  {path:'productos', component:ProductosComponent}
 ];
 
 
@@ -20,14 +23,15 @@ const routes:Routes=[
     AppComponent,
     VentasComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [VentaService],
+  providers: [VentaService, ProductosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
